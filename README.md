@@ -13,7 +13,7 @@ W repozytorium wybierz **Settings → Pages → Build and deployment → Deploy 
 ## Struktura
 
 - `index.html` — homepage z dwoma wejściami do kursów.
-- `kursy/zarzadzanie-designem.html` — wprowadzenie, trzy przykładowe zajęcia, zaliczenie.
+- `kursy/zarzadzanie-designem.html` — sylabus, 12 terminów zajęć, prezentacja wprowadzająca i zasady zaliczenia.
 - `kursy/warsztaty-badawczo-projektowe.html` — strona kursu w przygotowaniu.
 - `assets/css/style.css` — paleta, wspólne komponenty, responsywność i druk.
 - `assets/js/main.js` — mobilne menu i aktywna sekcja podczas przewijania.
@@ -26,9 +26,9 @@ Każde zajęcia mają komponenty oznaczone `data-component`: `intro`, `slides`, 
 
 ### Materiały Google Drive i multimedia
 
-Prototyp nie zawiera rzeczywistych plików dydaktycznych ani fikcyjnych aktywnych odnośników. Po przygotowaniu prezentacji zastąp status „W przygotowaniu” odnośnikiem np. `<a href="WŁAŚCIWY_ADRES">Otwórz prezentację ↗</a>`. Podobnie zastąp nazwę materiału na liście linkiem do pliku PDF na Drive, filmu YouTube, podcastu lub strony. Używaj opisowych etykiet. Jeżeli wybierasz otwieranie w nowej karcie, dodaj `target="_blank" rel="noopener noreferrer"` i informację „nowa karta”. Sprawdź uprawnienia dostępu do każdego pliku w oknie prywatnym przed udostępnieniem kursu.
+Wprowadzenie zawiera podany przez prowadzącą link do Google Slides. Pozostałe zajęcia mają miejsca na materiały. Po przygotowaniu prezentacji zastąp status „W przygotowaniu” odnośnikiem np. `<a href="WŁAŚCIWY_ADRES">Otwórz prezentację ↗</a>`. Podobnie zastąp nazwę materiału na liście linkiem do pliku PDF na Drive, filmu YouTube, podcastu lub strony. Używaj opisowych etykiet. Jeżeli wybierasz otwieranie w nowej karcie, dodaj `target="_blank" rel="noopener noreferrer"` i informację „nowa karta”. Sprawdź uprawnienia dostępu do każdego pliku w oknie prywatnym przed udostępnieniem kursu.
 
-Przykładowe tematy, ćwiczenia i zaliczenie wymagają zatwierdzenia prowadzącej. Terminy i kryteria nie zostały wymyślone. Drugi kurs ma własny kolor i stronę informacyjną, bez przykładowego programu.
+Treść kursu Zarządzanie designem opiera się na opisie i harmonogramie przekazanym przez prowadzącą. Daty październik–grudzień dotyczą 2026 r., styczeń — 2027 r. Błędny zapis „2026-13-01” zinterpretowano jako 13.01.2027, zgodnie ze środą i rokiem akademickim 2026/27. Drugi kurs ma własny kolor i stronę informacyjną, bez przykładowego programu.
 
 ## System wizualny i dostępność
 
@@ -38,4 +38,8 @@ Nawigacja klawiaturą, link pomijający nagłówek, widoczny fokus, `aria-curren
 
 ## Weryfikacja prototypu
 
-Sprawdzono składnię JavaScriptu, istnienie lokalnych ścieżek, poprawność kotwic, unikalność identyfikatorów i obecność siedmiu komponentów w każdych z trzech zajęć. Test wizualny i interakcyjny w przeglądarce pozostaje do wykonania: środowisko wykonawcze blokowało uruchomienie przeglądarki testowej, a przeglądarka aplikacji blokowała adresy lokalnych plików. Przed udostępnieniem osobom uczestniczącym sprawdź widoki 320, 375, 768 i 1440 px oraz menu, przewijanie i rozwijane materiały.
+Sprawdzono składnię JavaScriptu, istnienie lokalnych ścieżek, poprawność kotwic, unikalność identyfikatorów i zgodność harmonogramu z 12 sekcjami zajęć i środowymi datami. Test wizualny i interakcyjny w przeglądarce pozostaje do wykonania: środowisko wykonawcze blokowało uruchomienie przeglądarki testowej, a przeglądarka aplikacji blokowała adresy lokalnych plików. Przed udostępnieniem osobom uczestniczącym sprawdź widoki 320, 375, 768 i 1440 px oraz menu, przewijanie i rozwijane materiały.
+
+## Uzupełnianie kolejnych zajęć
+
+Opcjonalne komponenty są w `templates/lesson-components.html`. Kopiuj tylko potrzebne bloki z wnętrza `template` do sekcji zajęć i zastąp teksty w nawiasach. Na stronie nie są wyświetlane puste ćwiczenia, zadania ani wymyślone materiały. Pierwsze spotkanie (07.10.2026) to sekcja Wprowadzenie; kolejne mają numery 02–12.
