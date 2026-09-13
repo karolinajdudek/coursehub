@@ -11,3 +11,40 @@
 .schedule{margin-top:48px}.schedule table{border-collapse:collapse;width:100%;font-size:14px}.schedule caption{text-align:left;font-size:12px;color:#555;margin-bottom:16px}.schedule th{text-align:left;font-size:11px;letter-spacing:.06em;text-transform:uppercase}.schedule th,.schedule td{padding:17px 12px;border-bottom:1px solid var(--line);vertical-align:top}.schedule th:first-child,.schedule td:first-child{padding-left:0;white-space:nowrap;font-variant-numeric:tabular-nums}.schedule td a{font-weight:700}.schedule td a:hover{text-decoration:underline}.schedule td p{font-size:12px;margin-top:7px;color:#555}
 .materials-pending{border-top:1px solid var(--line);margin-top:28px;padding-top:20px;color:#555}.materials-pending p{font-size:14px;margin-top:8px}.lesson-heading>div{min-width:0}.lesson-heading h2{overflow-wrap:anywhere}
 @media(max-width:700px){body.js #course-nav{max-height:calc(100dvh - 100px)}.sidebar{max-height:100dvh}body:not(.js) .sidebar{position:relative;max-height:none}body:not(.js) #course-nav{overflow:visible}.module h2{font-size:26px}.schedule th,.schedule td{padding:14px 7px}.schedule td:first-child{font-size:11px}.schedule td p{font-size:12px}.schedule .section-label{align-items:start}.content-heading{font-size:25px}}
+
+/* Reading rhythm: separate modules and make each schedule row self-contained. */
+.module-list{margin:56px 0 64px}
+.module{padding:0;border-top:0}
+.module + .module{margin-top:56px;padding-top:40px;border-top:1px solid var(--line)}
+.module h2{margin-top:14px;line-height:1.2}
+.module p{max-width:70ch;line-height:1.7}
+.work-method{padding:36px}
+.work-method p{max-width:70ch}
+.meeting-intro{margin-top:56px;padding-top:36px;border-top:1px solid var(--line)}
+.meeting-intro .content-heading{margin-top:0}
+.schedule{margin-top:64px}
+.schedule table{table-layout:fixed;border-collapse:separate;border-spacing:0 12px}
+.schedule caption{margin-bottom:12px}
+.schedule th{padding:10px 22px;border-bottom:0}
+.schedule th:first-child,.schedule td:first-child{width:142px;padding-left:22px}
+.schedule td{padding:24px 22px;background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line);vertical-align:top}
+.schedule td:first-child{border-left:3px solid var(--course);font-size:14px;font-weight:700;color:var(--course);line-height:1.5}
+.schedule td:last-child{border-right:1px solid var(--line)}
+.schedule td a{display:inline-block;font-size:16px;line-height:1.5;text-underline-offset:4px}
+.schedule td p{margin-top:8px;font-size:13px;line-height:1.6;max-width:62ch}
+@media(max-width:700px){
+ .module-list{margin:40px 0 48px}
+ .module + .module{margin-top:40px;padding-top:32px}
+ .work-method{padding:24px}
+ .meeting-intro{margin-top:40px;padding-top:28px}
+ .schedule{margin-top:48px}
+ .schedule table{table-layout:auto;border-spacing:0}
+ .schedule thead{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+ .schedule tbody,.schedule tr,.schedule td{display:block}
+ .schedule tr{margin-bottom:16px;border:1px solid var(--line);border-left:3px solid var(--course);background:var(--white)}
+ .schedule td,.schedule td:first-child,.schedule td:last-child{width:auto;border:0;padding:0 20px;background:transparent;white-space:normal}
+ .schedule td:first-child{padding-top:18px;font-size:13px}
+ .schedule td:last-child{padding-top:8px;padding-bottom:20px}
+ .schedule td a{font-size:16px}
+ .schedule td p{font-size:13px}
+}
