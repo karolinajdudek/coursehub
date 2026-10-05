@@ -48,3 +48,14 @@
  .schedule td a{font-size:16px}
  .schedule td p{font-size:13px}
 }
+
+/* Workshop timetable */
+.pink #course-nav a[aria-current]{color:var(--ink)}
+.pink .workshop-schedule{margin-top:24px}
+.pink .workshop-schedule td:first-child{color:var(--ink)}
+.workshop-day{display:block;margin-top:8px;font-size:12px;font-weight:400}
+.workshop-hours{display:block;font-size:13px;font-weight:700;letter-spacing:.02em;margin-bottom:12px}
+.workshop-topic{font-size:18px;line-height:1.4;letter-spacing:-.02em;overflow-wrap:anywhere}
+.workshop-schedule .no-class td{background:#ebebe5}
+.workshop-schedule .no-class td:first-child{border-left-color:var(--ink)}
+@media(max-width:700px){.workshop-day{display:inline;margin-left:12px}.workshop-schedule td:first-child br{display:none}.workshop-schedule td:first-child time{display:inline-flex;gap:4px}.workshop-schedule .no-class{border-left-color:var(--ink);background:#ebebe5}}
